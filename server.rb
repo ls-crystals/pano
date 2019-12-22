@@ -13,7 +13,8 @@ end
 
 get '/login' do
   erb :login
-end
+  #if user is logged in, reirect to thier home page 
+  end
 
 
 
