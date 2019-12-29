@@ -1,5 +1,40 @@
 .start{
-  margin-left: 43%;
+  background-color: rgba(104, 0, 0, 0.5);
+  background-size: contain;
+  padding: 1%;
+  margin-right: 25%;
+  margin-left: 25%;
   margin-top: 10%;
-  
+  color:white;
+
+}
+
+body{
+  background-image: url("log2.jpg");
+  background-repeat: no-repeat;
+  width:100%;
+  height: 100%;
+  background-size: cover;
+
+}
+
+
+#email{
+  margin-bottom: 6%;
+  margin-left: 30%;
+}
+
+#password{
+  margin-left: 30%;
+  margin-bottom: 6%;
+
+}
+
+#sub{
+  margin-left: 33%;
+
+}
+
+#started{
+  margin-right: 43%;
 }
