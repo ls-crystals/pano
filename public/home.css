@@ -53,3 +53,16 @@ color: white;
   display: inline-block;
   font-size: 16px;
 }
+
+#h{
+  margin-left: 43%;
+}
+
+#more{
+  background-color: white;
+  font-family: monospace;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-bottom: 20%;
+  padding-top: 5%;
+}
