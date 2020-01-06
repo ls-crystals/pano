@@ -16,15 +16,18 @@ GEM
     i18n (1.7.0)
       concurrent-ruby (~> 1.0)
     minitest (5.13.0)
-    mustermann (1.0.3)
+    mustermann (1.1.1)
+      ruby2_keywords (~> 0.0.1)
+    pg (1.2.1-x64-mingw32)
     rack (2.0.8)
-    rack-protection (2.0.7)
+    rack-protection (2.0.8.1)
       rack
     rake (13.0.1)
-    sinatra (2.0.7)
+    ruby2_keywords (0.0.1)
+    sinatra (2.0.8.1)
       mustermann (~> 1.0)
       rack (~> 2.0)
-      rack-protection (= 2.0.7)
+      rack-protection (= 2.0.8.1)
       tilt (~> 2.0)
     sinatra-activerecord (2.0.14)
       activerecord (>= 3.2)
@@ -34,7 +37,7 @@ GEM
     sqlite3 (1.4.2)
     thread_safe (0.3.6)
     tilt (2.0.10)
-    tzinfo (1.2.5)
+    tzinfo (1.2.6)
       thread_safe (~> 0.1)
     zeitwerk (2.2.2)
 
@@ -42,6 +45,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  pg!
   rake!
   sinatra!
   sinatra-activerecord!
@@ -49,4 +53,4 @@ DEPENDENCIES
   sqlite3!
 
 BUNDLED WITH
-   2.1.1
+   2.1.4
