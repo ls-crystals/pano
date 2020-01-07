@@ -12,7 +12,7 @@ set :port, 3000
 
 enable :sessions
 
-set :database, {adapter: 'postgresql', database: 'socialmedia', username: 'postgres', password: 'Facingyak8'}
+set :database, {adapter: 'postgresql', database: 'socialmedia', username: 'postgres', password: ENV['POSTGRES_PW']}
 #home
 
 get '/' do
@@ -45,19 +45,20 @@ get '/login' do
 end
 
 
-post '/login' do
-    @user = User.find_by(email: params[:email])
-    @password_attempt = params[:password]
-    if @user.password == @password_attempt
-      flash[:notice] = "You have logged in sucessfuly!"
-      session[:user_id] = @user.id
+
+
+  post '/login' do
+    puts params
+    user = User.find_by(email:params[:email])
+    given_password = params[:password]
+    if given_password == user.password
+      session[:user_id] = user.id
       redirect '/profile'
     else
       flash[:error] = "invalid password"
       redirect "/login"
     end
   end
-
 
 #profile
 get '/profile' do
