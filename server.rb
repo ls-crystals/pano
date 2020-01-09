@@ -2,7 +2,49 @@ require 'sinatra/activerecord'
 require 'sinatra'
 require 'sinatra/flash'
 require 'pg'
-require './models'
+
+require './model'
+
+
+
+
+set :port, 3000
+
+
+enable :sessions
+
+set :database, {adapter: 'postgresql', database: 'socialmedia', username: 'postgres', password: ENV['POSTGRES_PW']}
+#home
+
+get '/' do
+  erb :home
+end
+
+# signup
+get '/signup' do
+  erb :signup
+end
+
+
+post '/signup' do
+  pp params
+  @user = User.new(params[:user])
+  if @user.valid?
+  @user.save
+  session[:id] = @user.id
+  redirect '/profile'
+else
+  flash[:error] = @user.errors.full_message
+  redirect '/signup'
+end
+
+end
+
+
+#login
+get '/login' do
+  erb :login
+end
 
 
 
@@ -69,5 +111,4 @@ end
 
 get '/logout' do
   session.clear
-  puts "you have sucessfully logged out"
 end

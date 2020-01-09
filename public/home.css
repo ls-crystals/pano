@@ -1,12 +1,7 @@
 body{
-  background-image: url("home.png");
+  background-image: url("https://miro.medium.com/max/12280/0*OK5cDL7hSiv-l1og");
   background-size: cover;
-  background-size: 100%;
-  z-index: -1;
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: center;
 
 }
 
@@ -15,7 +10,7 @@ body{
   color: white;
 }
 
-h1{
+#pano{
   font-size: 300%;
   font-family: 'Modak', cursive;
   margin-left: 49%;
@@ -40,6 +35,10 @@ color:white;
 margin-left: 41%;
 display: block;
 color: white;
+}
+
+ul:hover{
+  background-color: black;
 }
 
 #but{

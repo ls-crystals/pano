@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="profile.css">
+<link rel="stylesheet" href="main.css">
+<form class="" action="/profile" method="post">
+  <div class="start">
+    <h1> <% session[:user_id] %> </h1>
+<h1> <%   user = User.find_by(id:session[:user_id]) %> </h1>
+<h1> <%= "Welcome #{user.firstname }" %> </h1>
+  <h1>Whats on your mind?</h1>
+    <p id = "started">Get started Today! </p>
+    <input class="userpost" type="text" placeholder="Share your insight" name="user[userpost]"><br>
+
+    <input id="sub" type="submit" value="post"><br>
+  </div>
+
+  </form>
