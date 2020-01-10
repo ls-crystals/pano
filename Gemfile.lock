@@ -13,28 +13,29 @@ GEM
       tzinfo (~> 1.1)
       zeitwerk (~> 2.2)
     concurrent-ruby (1.1.5)
-    i18n (1.7.0)
+    i18n (1.8.1)
       concurrent-ruby (~> 1.0)
     minitest (5.13.0)
-    mustermann (1.0.3)
-    rack (2.0.8)
-    rack-protection (2.0.7)
+    mustermann (1.1.1)
+      ruby2_keywords (~> 0.0.1)
+    rack (2.1.0)
+    rack-protection (2.0.8.1)
       rack
     rake (13.0.1)
-    sinatra (2.0.7)
+    ruby2_keywords (0.0.2)
+    sinatra (2.0.8.1)
       mustermann (~> 1.0)
       rack (~> 2.0)
-      rack-protection (= 2.0.7)
+      rack-protection (= 2.0.8.1)
       tilt (~> 2.0)
     sinatra-activerecord (2.0.14)
       activerecord (>= 3.2)
       sinatra (>= 1.0)
     sinatra-flash (0.3.0)
       sinatra (>= 1.0.0)
-    sqlite3 (1.4.2)
     thread_safe (0.3.6)
     tilt (2.0.10)
-    tzinfo (1.2.5)
+    tzinfo (1.2.6)
       thread_safe (~> 0.1)
     zeitwerk (2.2.2)
 
@@ -46,7 +47,6 @@ DEPENDENCIES
   sinatra!
   sinatra-activerecord!
   sinatra-flash (~> 0.3.0)!
-  sqlite3!
 
 BUNDLED WITH
-   2.1.1
+   2.1.4
