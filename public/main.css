@@ -54,6 +54,26 @@ body {
 
 }
 
+.tab{
+  border-style: solid;
+  border-radius: 10%;
+  color: white;
+  background-color: black;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-bottom: 20%;
+}
+
+#title{
+  padding-right: 50%;
+
+}
+
+
+#content{
+
+}
+
 
 #make nav bar small and to the left
 

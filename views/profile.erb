@@ -10,11 +10,11 @@
   </div>
 
 
-    <form class="" action="/profile" method="post">
+    <form class="" method="post">
 
     <input class="post-title" type="text" placeholder="About?" name="post[title]"><br>
     <input class="userpost" type="text" placeholder="Share your insight" name="post[content]"><br>
-    <button id ="post"type="submit" formaction="/profile">endow us </button>
+    <button id ="post"type="submit" formaction="/profile" method="post">endow us </button>
 
   </form>
 
@@ -22,8 +22,12 @@
 
 
 
-  <%  @post = Post.all %>
+  <%   @post = Post.all %>
+  <div class="tab">
   <% @post.each do |post| %>
+
     <h1 id="title">Title:  <%= post.title %></h1>
     <h2 id="content">watchu got?:  <%= post.content %></h2>
     <% end %>
+  </div>
+  <a href=" /delete">Delete</a>
