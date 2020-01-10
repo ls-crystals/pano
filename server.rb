@@ -5,9 +5,6 @@ require 'pg'
 
 require './model'
 
-
-
-
 set :port, 3000
 
 
@@ -44,26 +41,6 @@ end
 #login
 get '/login' do
   erb :login
-end
-
-
-
-
-set :port, 3000
-
-
-enable :sessions
-
-set :database, {adapter: 'postgresql', database: 'socialmedia', username: 'postgres', password: ENV['POSTGRES_PW']}
-#home
-
-get '/' do
-  erb :home
-end
-
-# signup
-get '/signup' do
-  erb :signup
 end
 
 
@@ -108,6 +85,36 @@ get '/profile' do
 end
 
 
+post '/profile' do
+    @post = Post.new(params[:post])
+    if @post.valid?
+        @post.save
+        @post= Post.all
+        redirect '/profile'
+      else redirect '/profile'
+  end
+end
+
+
+get '/feed' do
+  erb:feed
+  @post= Post.all
+end
+
+
+
+
+
+delete '/delete' do
+  user = User.find_by(email:params[:email])
+  user.destroy
+end
+
+
+get '/delete' do
+  session[:id] = @user
+  @user.destroy
+end
 
 get '/logout' do
   session.clear

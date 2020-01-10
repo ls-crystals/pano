@@ -1,0 +1,10 @@
+<p>hello</p>
+
+
+
+
+  <%  @post = Post.all %>
+  <% @post.each do |post| %>
+    <h1 id="title">Title:  <%= post.title %></h1>
+    <h2 id="content">watchu got?:  <%= post.content %></h2>
+    <% end %>
