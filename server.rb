@@ -49,7 +49,7 @@ post '/signup' do
   if @user.valid?
   @user.save
   session[:id] = @user.id
-  redirect '/profile'
+  redirect '/login'
 else
   flash[:error] = @user.errors.full_message
   redirect '/signup'

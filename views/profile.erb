@@ -26,8 +26,9 @@
   <div class="tab">
   <% @post.each do |post| %>
 
-    <h1 id="title">Title:  <%= post.title %></h1>
-    <h2 id="content">watchu got?:  <%= post.content %></h2>
+    <h1 id="title">Title:<%= post.title %></h1>
+    <h2 id="content">speak:<%= post.content %></h2>
+    <p>-----------------------------------------------------------------------------------------</p>
     <% end %>
   </div>
   <a href=" /delete">Delete</a>
