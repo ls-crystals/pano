@@ -10,7 +10,17 @@ set :port, 3000
 
 enable :sessions
 
-set :database, {adapter: 'postgresql', database: 'socialmedia', username: 'postgres', password: ENV['POSTGRES_PW']}
+configure :development do
+  set :database, adapter: 'postgresql',
+  database: 'socialmedia',
+  username: 'postgres',
+  password: ENV['POSTGRES_PW']
+end
+
+configure :production do
+  set :database, url: ENV['DATABASE_URL']
+end
+
 #home
 
 get '/' do
