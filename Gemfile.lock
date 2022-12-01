@@ -1,4 +1,7 @@
 GEM
+  specs:
+
+GEM
   remote: https://rubygems.org/
   specs:
     activemodel (6.0.2.1)
@@ -16,17 +19,19 @@ GEM
     i18n (1.8.1)
       concurrent-ruby (~> 1.0)
     minitest (5.13.0)
-    mustermann (1.1.1)
+    mustermann (2.0.2)
       ruby2_keywords (~> 0.0.1)
-    rack (2.1.0)
-    rack-protection (2.0.8.1)
+    pg (1.4.5)
+    pg (1.4.5-x64-mingw32)
+    rack (2.2.4)
+    rack-protection (2.2.3)
       rack
     rake (13.0.1)
-    ruby2_keywords (0.0.2)
-    sinatra (2.0.8.1)
-      mustermann (~> 1.0)
-      rack (~> 2.0)
-      rack-protection (= 2.0.8.1)
+    ruby2_keywords (0.0.5)
+    sinatra (2.2.3)
+      mustermann (~> 2.0)
+      rack (~> 2.2)
+      rack-protection (= 2.2.3)
       tilt (~> 2.0)
     sinatra-activerecord (2.0.14)
       activerecord (>= 3.2)
@@ -34,15 +39,17 @@ GEM
     sinatra-flash (0.3.0)
       sinatra (>= 1.0.0)
     thread_safe (0.3.6)
-    tilt (2.0.10)
+    tilt (2.0.11)
     tzinfo (1.2.6)
       thread_safe (~> 0.1)
     zeitwerk (2.2.2)
 
 PLATFORMS
   x64-mingw32
+  x86_64-linux
 
 DEPENDENCIES
+  pg!
   rake!
   sinatra!
   sinatra-activerecord!
